@@ -1,0 +1,9 @@
+name:              rw716
+version:           1.0
+Build-Type:        Simple
+cabal-version:     >= 1.2
+
+executable rw716
+  main-is:         Main.hs
+  hs-source-dirs:  src, tut1, tut2, tut3, tut4, tut5, test1
+  build-depends:   base, containers, ghc
