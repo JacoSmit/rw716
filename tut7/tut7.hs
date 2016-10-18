@@ -16,6 +16,11 @@ module Tut7 where
             foldingFunction (x:xs) "^" = [Left "Too few numerical operands when applying the operator ^"]
             foldingFunction (x:xs) "/" = [Left "Too few numerical operands when applying the operator /"]
             foldingFunction [] "ln" = [Left "Too few numerical operands when applying the operator ln"]
+            foldingFunction [] "*" = [Left "Too few numerical operands when applying the operator *"]
+            foldingFunction [] "+" = [Left "Too few numerical operands when applying the operator +"]
+            foldingFunction [] "-" = [Left "Too few numerical operands when applying the operator -"]
+            foldingFunction [] "^" = [Left "Too few numerical operands when applying the operator ^"]
+            foldingFunction [] "/" = [Left "Too few numerical operands when applying the operator /"]
             foldingFunction xs numberString = Right (read numberString):xs
 
   division :: (Eq b, Fractional b) => Either String b -> Either String b -> [Either String b] -> [Either String b]
