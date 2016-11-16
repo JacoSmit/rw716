@@ -20,11 +20,6 @@ module Calc where
     Just r -> Just (eval r)
     Nothing -> Nothing
 
-  --evalStr s = check (parseExp Lit Add Mul s)
-
-  --check :: Maybe ExprT -> Maybe Integer
-  --check Nothing = Nothing
-  --check (Just a) = Just (eval a)
 
   ----------------------------------
   --      Exercise 3              --

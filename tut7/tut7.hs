@@ -27,7 +27,8 @@ module Tut7 where
   division (Right 0) _ ys = Left "Division by zero":ys
   division x y ys = ((/) <$> y <*> x):ys
 
-  logarithm :: (Floating b, Ord b) => Either t b -> [Either String b] -> [Either String b]
+  --logarithm :: (Floating b, Ord b) => Either t b -> [Either String b] -> [Either String b]
   logarithm (Right x) xs = if x <= 0
     then Left "Log of non positive number encountered":xs
     else (log <$> Right x):xs
+  logarithm (Left x) xs = [Left x]
